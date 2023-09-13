@@ -10,7 +10,17 @@ another line
 */
 
 function sumAll(arr) {
-    return 1;
+  let sum = 0;
+  let min = arr[0] < arr[1] ? arr[0]: arr[1];
+  let max = arr[0] < arr[1] ? arr[1]: arr[0];
+
+  for(let i = min; i <= max; i++)
+     sum += i;
+  return sum;
   }
-  
+
+// Tests
 console.log(sumAll([1, 4]));
+console.log(sumAll([4, 1]));
+console.log(sumAll([5, 10]));
+console.log(sumAll([10, 5]));
